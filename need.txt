@@ -1,0 +1,92 @@
+# .bash_profile 
+if [ -n "$BASH" ] && [ -r ~/.bash_profile ]; then 
+    . ~/.bash_profile
+fi
+
+
+
+
+
+
+
+
+# my setting
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;34m\]🐧 ~> \[\033[00m\]'        
+
+# my aliases
+alias lsp='ls -lh --color=always | sed 1d | awk "{printf \"%s %s %s %5s %-30s\n", \$1, \$3, \$4, 
+\$5, \$9}"'
+alias lsa='ls - lah --color=always | grep -v "^total"'
+alias lsl='ls - lh --color=always | grep -v "^total"'
+
+# color fix for other terminals
+# enable color support of ls also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)" 
+    alias ls='ls --color=auto'                 
+    alias dir='dir --color=auto'                 
+    alias grep='grep --color=auto'                 
+    alias frep='frep --color=auto'                 
+    alias egrep='egrep --color=auto'
+fi 
+
+# yeloow color for directories 
+# 30 - 37 can change color a folder
+LS_DIR_COLOR='di=1;32:'
+LS_COLORS=$LS_COLORS$LS_DIR_COLOR
+
+# set terminal title
+PROMPT_COMMAND='echo -ne "\033]0;$(pwd)\007"'
+
+
+
+
+
+
+
+
+
+
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+ 
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+ 
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'flazz/vim-colorschemes'
+Plugin 'tpope/vim-surround'
+ 
+call vundle#end()            " required
+filetype plugin indent on    " required
+ 
+ 
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'morhetz/gruvbox'
+call plug#end()
+ 
+ 
+syntax on    "підсвітка текста
+"colorscheme gruvbox   "вмикає кольорову тему Грувбокс із темним фоном
+"set background=dark
+colorscheme OceanicNext
+set number      "вмикає номер рядка 
+set expandtab    "коректна робота табувань для Python
+set tabstop=4
+set hlsearch     "підсвітка знайденого слова
+set incsearch    "пошук по слові та зразу знаходить перше слово
+set autoindent
+let python_highlight_all = 1
+set t_Co=256
+set termencoding=utf-8
+set wrap
+set linebreak
+set encoding=utf-8
+ 
+ 
+map <C-n> :NERDTreeToggle<CR>
