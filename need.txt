@@ -42,54 +42,65 @@ PROMPT_COMMAND='echo -ne "\033]0;$(pwd)\007"'
 # Settings Vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ~/.vimrc
+set nocompatible
+filetype off
 
-
-set nocompatible              " be iMproved, required
-filetype off                  " required
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'flazz/vim-colorschemes'
 Plugin 'tpope/vim-surround'
- 
-call vundle#end()            " required
-filetype plugin indent on    " required
-
- 
-" call plug#begin('~/.vim/plugged')
-" Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-" Plug 'morhetz/gruvbox'
-" call plug#end()
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-colorscheme-switcher'
+call vundle#end()
+filetype plugin indent on
 
 
-syntax on    "підсвітка текста
-"colorscheme gruvbox   "вмикає кольорову тему Грувбокс із темним фоном
-"set background=dark
-colorscheme OceanicNext " або такі теми: py-darcula, rdark-terminal, one-monokai
-set number      "вмикає номер рядка 
-set expandtab    "коректна робота табувань для Python
+"call plug#begin('~/.vim/plugged')
+"Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+"Plug 'morhetz/gruvbox'
+"Plug 'fratajczak/one-monokai-vim'
+"call plug#end()
+
+
+
+syntax on
+colorscheme one-monokai " py-darcula, rdark-terminal, one-monokai, OceanicNext, asmdev, afterglow, 
+"set number      " count line
+
 set tabstop=4
-set hlsearch     "підсвітка знайденого слова
-set incsearch    "пошук по слові та зразу знаходить перше слово
+set shiftwidth=4
+set smarttab
+set expandtab
+set softtabstop=4
 set autoindent
+
+set hlsearch     " find world
+set incsearch    "пошук по слові та зразу знаходить перше слово
 let python_highlight_all = 1
 set t_Co=256
 set termencoding=utf-8
+set termguicolors
 set wrap
 set linebreak
 set encoding=utf-8
- 
- 
+set nobackup
+set noswapfile
+set fileencodings=utf8,cp1251
+
+
 map <C-n> :NERDTreeToggle<CR>
+                                
 
 
 
-# For drive on tree
+
+
+# nerdtreee
 If Vundle:
 PluginInstall
 
@@ -100,7 +111,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 
-# If wifi driver not found
+# wifi driver
 lspci -k | grep -iA2 net
 sudo apt-get update
 sudo apt-get install firmware-b43-installer
