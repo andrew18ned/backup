@@ -70,7 +70,7 @@ filetype plugin indent on    " required
 syntax on    "підсвітка текста
 "colorscheme gruvbox   "вмикає кольорову тему Грувбокс із темним фоном
 "set background=dark
-colorscheme OceanicNext " або такі теми: py-darcula, rdark-terminal
+colorscheme OceanicNext " або такі теми: py-darcula, rdark-terminal, one-monokai
 set number      "вмикає номер рядка 
 set expandtab    "коректна робота табувань для Python
 set tabstop=4
