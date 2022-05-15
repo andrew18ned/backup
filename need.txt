@@ -44,8 +44,6 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ~/.vimrc
 set nocompatible
 filetype off
-
-
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
@@ -56,29 +54,23 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'tpope/vim-surround'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-colorscheme-switcher'
+Plugin 'tpope/vim-commentary'
 call vundle#end()
 filetype plugin indent on
-
-
-"call plug#begin('~/.vim/plugged')
-"Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-"Plug 'morhetz/gruvbox'
-"Plug 'fratajczak/one-monokai-vim'
-"call plug#end()
-
-
-
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'morhetz/gruvbox'
+Plug 'fratajczak/one-monokai-vim'
+call plug#end()
 syntax on
 colorscheme one-monokai " py-darcula, rdark-terminal, one-monokai, OceanicNext, asmdev, afterglow, 
-"set number      " count line
-
+nnoremap <C-_> :Commentary<cr>
 set tabstop=4
 set shiftwidth=4
 set smarttab
 set expandtab
 set softtabstop=4
 set autoindent
-
 set hlsearch     " find world
 set incsearch    "пошук по слові та зразу знаходить перше слово
 let python_highlight_all = 1
@@ -91,16 +83,15 @@ set encoding=utf-8
 set nobackup
 set noswapfile
 set fileencodings=utf8,cp1251
-
-
 map <C-n> :NERDTreeToggle<CR>
+
                                 
 
 
 
 
 
-# nerdtreee
+
 If Vundle:
 PluginInstall
 
