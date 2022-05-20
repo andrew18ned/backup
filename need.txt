@@ -111,6 +111,8 @@ sudo reboot
 
 
 
+ # Themes pc or laptop
+ Panel - Numix-Cinnamon-Transparent
  
 
  
