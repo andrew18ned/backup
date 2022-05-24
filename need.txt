@@ -159,3 +159,4 @@ bat -theme _name_theme_ name-file-you-gonna-open
 * copy what-copy where-copy
 * *.py and ???.py
 * chmod
+* chown
