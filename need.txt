@@ -145,6 +145,7 @@ bat -theme _name_theme_ name-file-you-gonna-open
 * some_command --help
 * vim 
 * ls
+* pwd
 * cd
 * less
 * cat
