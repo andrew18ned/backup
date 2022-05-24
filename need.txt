@@ -161,3 +161,5 @@ bat -theme _name_theme_ name-file-you-gonna-open
 * *.py and ???.py
 * chmod
 * chown
+* ifconfig
+* lscpu
