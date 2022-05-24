@@ -137,3 +137,15 @@ sudo reboot
 bat --list-themes # list alowed themes
 bat -theme _name_theme_ name-file-you-gonna-open 
 
+
+
+
+
+# useful command on linux
+* vim 
+* less
+* cat
+* htop
+* grep
+* > and >> 
+* touch
