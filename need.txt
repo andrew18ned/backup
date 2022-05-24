@@ -154,5 +154,8 @@ bat -theme _name_theme_ name-file-you-gonna-open
 * grep 
 * > and >> 
 * touch
+* rm
+* mv
+* copy what-copy where-copy
 * *.py and ???.py
 * chmod
