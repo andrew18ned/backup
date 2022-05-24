@@ -142,6 +142,7 @@ bat -theme _name_theme_ name-file-you-gonna-open
 
 
 # useful command on linux
+* some_command --help
 * vim 
 * ls
 * cd
