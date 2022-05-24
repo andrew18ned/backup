@@ -152,3 +152,4 @@ bat -theme _name_theme_ name-file-you-gonna-open
 * > and >> 
 * touch
 * *.py and ???.py
+* chmod
