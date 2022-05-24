@@ -148,6 +148,8 @@ bat -theme _name_theme_ name-file-you-gonna-open
 * cd
 * less
 * cat
+* head
+* tail
 * htop
 * grep 
 * > and >> 
