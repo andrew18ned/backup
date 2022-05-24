@@ -163,4 +163,5 @@ bat -theme _name_theme_ name-file-you-gonna-open
 * chown
 * ifconfig
 * lscpu
-'[0-9]' # list number on 0 to 9
+'[0-9]' # list numbers on 0 to 9
+'[a-z]' # list letters on a to z
