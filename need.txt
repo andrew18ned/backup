@@ -146,6 +146,7 @@ bat -theme _name_theme_ name-file-you-gonna-open
 * less
 * cat
 * htop
-* grep
+* grep 
 * > and >> 
 * touch
+* *.py and ???.py
