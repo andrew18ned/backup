@@ -1,14 +1,18 @@
+# Download Google Chrome use terminal
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
-# Settings terminal
-~/.bashrc
+
+
+
+
+# Settings beautiful terminal
+open ~/.bashrc
 # .bash_profile 
 if [ -n "$BASH" ] && [ -r ~/.bash_profile ]; then 
     . ~/.bash_profile
 fi
 
-
-~/.bash_profile
+create ~/.bash_profile
 # my setting
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;34m\]🐧 ~> \[\033[00m\]'        
 
@@ -41,9 +45,16 @@ PROMPT_COMMAND='echo -ne "\033]0;$(pwd)\007"'
 
 
 
+
+
+
 # Settings Vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-~/.vimrc
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+create ~/.vimrc
+
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -87,12 +98,6 @@ set noswapfile
 set fileencodings=utf8,cp1251
 map <C-n> :NERDTreeToggle<CR>
 
-                                
-
-
-
-
-
 
 If Vundle:
 PluginInstall
@@ -100,11 +105,16 @@ PluginInstall
 If vim-plug:
 PlugInstall
 
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 
-# wifi driver
+
+
+
+
+
+
+
+# for correct work wifi driver, if don't have drive. Linux Mint + Laptop
 lspci -k | grep -iA2 net
 sudo apt-get update
 sudo apt-get install firmware-b43-installer
@@ -113,9 +123,17 @@ sudo reboot
 
 
 
- # Themes pc or laptop
+
+ # Themes pranstarent panel on Linux Mint
  Panel - Numix-Cinnamon-Transparent
  
-
  
+ 
+ 
+ 
+ 
+ 
+# Change command CAT on BAT
+bat --list-themes # list alowed themes
+bat -theme _name_theme_ name-file-you-gonna-open 
 
