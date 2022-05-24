@@ -167,3 +167,4 @@ bat -theme _name_theme_ name-file-you-gonna-open
 '[a-z]' # list letters on a to z
 '{2}' # qty symbols
 '([0-9a-f{2}:]){6}' # for find mac address
+some-command && some-command # == a and b
